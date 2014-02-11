@@ -1,0 +1,4 @@
+new:
+    resource: "@NewBundle/Resources/config/routing.yml"
+    prefix:   /
+
