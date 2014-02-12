@@ -1,0 +1,14 @@
+Dsh\NewBundle\Entity\Filmstrip\Photos:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        'datetime,Array,':
+            type: datetimetz
+            column: 'datetime, array,'
+    lifecycleCallbacks: {  }
