@@ -12,12 +12,12 @@ class DefaultController extends Controller
     
     $photos = new photos();
     
-    $photos->set_photoprice(20); */
+    $photos->set_photoprice(20);
     $photos->set_photofile(1);
     $photos->set_photolocation('Southampton');
     $photos->set_photoevent('thebigbang');
     $photos->set_photographer('Bogan');
-    $photos->set_datetimetaken(1999-12-03 12:44:16);
+    
            
     
     

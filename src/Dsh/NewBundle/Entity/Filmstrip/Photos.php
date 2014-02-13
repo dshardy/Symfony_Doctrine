@@ -43,10 +43,7 @@ class photos
      */
     protected $photographer;
 
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    protected $datetimetaken;
+   
 
 
 public function get_id(){
@@ -66,9 +63,6 @@ public function get_photoevent(){
 }
 public function get_photographer(){
     return $photographer;
-}
-public function get_datetimetaken(){
-    return $datetimetaken;
 }
 
 
@@ -90,9 +84,7 @@ public function set_photoevent($value){
 public function set_photographer($value){
     $this->photographer = $value;
 }
-public function set_datetimetaken($value){
-    $this->datetimetaken = $value;
-}
+
 
 }
 
