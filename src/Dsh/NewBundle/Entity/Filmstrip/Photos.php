@@ -5,191 +5,94 @@ namespace Dsh\NewBundle\Entity\Filmstrip;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Photos
+ * @ORM\Entity()
+ * @ORM\Table(name="photos")
  */
-class Photos
+
+class photos
 {
     /**
-     * @var integer
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
-     * @var string
+     * @ORM\Column(type="blob")
      */
-    private $photoName;
+    protected $photofile;
 
     /**
-     * @var string
+     * @ORM\Column(type="decimal")
      */
-    private $price;
+    protected $photoprice;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=100)
      */
-    private $location;
+    protected $photolocation;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=100)
      */
-    private $event;
+    protected $photoevent;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=100)
      */
-    private $photographer;
+    protected $photographer;
 
     /**
-     * @var \DateTime
+     * @ORM\Column(type="datetime")
      */
-    private $datetimetaken;
+    protected $datetimetaken;
 
 
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set photoName
-     *
-     * @param string $photoName
-     * @return Photos
-     */
-    public function setPhotoName($photoName)
-    {
-        $this->photoName = $photoName;
-
-        return $this;
-    }
-
-    /**
-     * Get photoName
-     *
-     * @return string 
-     */
-    public function getPhotoName()
-    {
-        return $this->photoName;
-    }
-
-    /**
-     * Set price
-     *
-     * @param string $price
-     * @return Photos
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-
-        return $this;
-    }
-
-    /**
-     * Get price
-     *
-     * @return string 
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * Set location
-     *
-     * @param string $location
-     * @return Photos
-     */
-    public function setLocation($location)
-    {
-        $this->location = $location;
-
-        return $this;
-    }
-
-    /**
-     * Get location
-     *
-     * @return string 
-     */
-    public function getLocation()
-    {
-        return $this->location;
-    }
-
-    /**
-     * Set event
-     *
-     * @param string $event
-     * @return Photos
-     */
-    public function setEvent($event)
-    {
-        $this->event = $event;
-
-        return $this;
-    }
-
-    /**
-     * Get event
-     *
-     * @return string 
-     */
-    public function getEvent()
-    {
-        return $this->event;
-    }
-
-    /**
-     * Set photographer
-     *
-     * @param string $photographer
-     * @return Photos
-     */
-    public function setPhotographer($photographer)
-    {
-        $this->photographer = $photographer;
-
-        return $this;
-    }
-
-    /**
-     * Get photographer
-     *
-     * @return string 
-     */
-    public function getPhotographer()
-    {
-        return $this->photographer;
-    }
-
-    /**
-     * Set datetimetaken
-     *
-     * @param \DateTime $datetimetaken
-     * @return Photos
-     */
-    public function setDatetimetaken($datetimetaken)
-    {
-        $this->datetimetaken = $datetimetaken;
-
-        return $this;
-    }
-
-    /**
-     * Get datetimetaken
-     *
-     * @return \DateTime 
-     */
-    public function getDatetimetaken()
-    {
-        return $this->datetimetaken;
-    }
+public function get_id(){
+    return $id;
 }
+public function get_photofile(){
+    return $photofile;
+}
+public function get_photoprice(){
+    return $photoprice;
+}
+public function get_photolocation(){
+    return $photolocation;
+}
+public function get_photoevent(){
+    return $photoevent;
+}
+public function get_photographer(){
+    return $photographer;
+}
+public function get_datetimetaken(){
+    return $datetimetaken;
+}
+
+
+public function set_id($value){
+    $this->id = $value;
+}
+public function set_photofile($value){
+    $this->photofile = $value;
+}
+public function set_photoprice($value){
+    $this->photoprice = $value;
+}
+public function set_photolocation($value){
+    $this->photolocation = $value;
+}
+public function set_photoevent($value){
+    $this->photoevent = $value;
+}
+public function set_photographer($value){
+    $this->photographer = $value;
+}
+public function set_datetimetaken($value){
+    $this->datetimetaken = $value;
+}
+
+}
+

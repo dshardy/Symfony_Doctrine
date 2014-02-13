@@ -2,19 +2,43 @@
 
 namespace Dsh\NewBundle\Controller;
 
+use Dsh\NewBundle\Entity\Filmstrip\Photos;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction()
     {
-        return $this->render('NewBundle:Default:index.html.twig', array('name' => $name));
+    
+    $photos = new photos();
+    
+    $photos->set_photoprice(20); */
+    $photos->set_photofile(1);
+    $photos->set_photolocation('Southampton');
+    $photos->set_photoevent('thebigbang');
+    $photos->set_photographer('Bogan');
+    $photos->set_datetimetaken(1999-12-03 12:44:16);
+           
+    
+    
+   /*  exit(\Doctrine\Common\Util\Debug::dump($photos)); */
+   
+   $em = $this->getDoctrine()->getManager();
+   $em->persist($photos);
+   $em->flush();    
+        
+        
+        return $this->render('NewBundle:Default:index.html.twig');
     }
 }
 
-// src/Acme/StoreBundle/Controller/DefaultController.php
+// src/Dsh/NewBundle/Controller/DefaultController.php
 
 // ...
+
+
+
+/*
 use Dsh\NewBundle\Entity\Filmstrip;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -34,3 +58,6 @@ public function createAction()
     $em->flush();
 
     return new Response('Created product id '.$product->getId());
+    
+}    
+*/
