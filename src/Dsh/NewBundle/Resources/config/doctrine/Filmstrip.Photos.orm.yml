@@ -1,6 +1,7 @@
 Dsh\NewBundle\Entity\Filmstrip\Photos:
     type: entity
     table: null
+    repositoryClass: Dsh\NewBundle\Entity\Filmstrip\PhotosRepository
     id:
         id:
             type: integer
@@ -8,7 +9,25 @@ Dsh\NewBundle\Entity\Filmstrip\Photos:
             generator:
                 strategy: AUTO
     fields:
-        'datetime,Array,':
+        photoName:
+            type: string
+            length: 255
+            column: PhotoName
+        price:
+            type: decimal
+            column: Price
+        location:
+            type: string
+            length: 255
+            column: Location
+        event:
+            type: string
+            length: 255
+            column: Event
+        photographer:
+            type: string
+            length: 255
+            column: Photographer
+        datetimetaken:
             type: datetimetz
-            column: 'datetime, array,'
     lifecycleCallbacks: {  }

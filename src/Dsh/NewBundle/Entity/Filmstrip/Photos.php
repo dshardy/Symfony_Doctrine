@@ -15,38 +15,34 @@ class Photos
     private $id;
 
     /**
-     * @var \DateTime
+     * @var string
      */
-    private $datetime;
+    private $photoName;
 
+    /**
+     * @var string
+     */
+    private $price;
 
-public function get_id(){
-    return $id;
-}
+    /**
+     * @var string
+     */
+    private $location;
 
+    /**
+     * @var string
+     */
+    private $event;
 
-
-public function get_datetime(){
-    return $datetime;
-}
-
-
-
-public function set_id($value){
-    $this->id = $value;
-}
-
-
-
-public function set_datetime($value){
-    $this->datetime = $value;
-}
-
+    /**
+     * @var string
+     */
+    private $photographer;
 
     /**
      * @var \DateTime
      */
-    private $datetime,Array,;
+    private $datetimetaken;
 
 
     /**
@@ -60,25 +56,140 @@ public function set_datetime($value){
     }
 
     /**
-     * Set datetime,Array,
+     * Set photoName
      *
-     * @param \DateTime $datetime,Array,
+     * @param string $photoName
      * @return Photos
      */
-    public function setDatetime,Array,($datetime,Array,)
+    public function setPhotoName($photoName)
     {
-        $this->datetime,Array, = $datetime,Array,;
+        $this->photoName = $photoName;
 
         return $this;
     }
 
     /**
-     * Get datetime,Array,
+     * Get photoName
+     *
+     * @return string 
+     */
+    public function getPhotoName()
+    {
+        return $this->photoName;
+    }
+
+    /**
+     * Set price
+     *
+     * @param string $price
+     * @return Photos
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return string 
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set location
+     *
+     * @param string $location
+     * @return Photos
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    /**
+     * Get location
+     *
+     * @return string 
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+
+    /**
+     * Set event
+     *
+     * @param string $event
+     * @return Photos
+     */
+    public function setEvent($event)
+    {
+        $this->event = $event;
+
+        return $this;
+    }
+
+    /**
+     * Get event
+     *
+     * @return string 
+     */
+    public function getEvent()
+    {
+        return $this->event;
+    }
+
+    /**
+     * Set photographer
+     *
+     * @param string $photographer
+     * @return Photos
+     */
+    public function setPhotographer($photographer)
+    {
+        $this->photographer = $photographer;
+
+        return $this;
+    }
+
+    /**
+     * Get photographer
+     *
+     * @return string 
+     */
+    public function getPhotographer()
+    {
+        return $this->photographer;
+    }
+
+    /**
+     * Set datetimetaken
+     *
+     * @param \DateTime $datetimetaken
+     * @return Photos
+     */
+    public function setDatetimetaken($datetimetaken)
+    {
+        $this->datetimetaken = $datetimetaken;
+
+        return $this;
+    }
+
+    /**
+     * Get datetimetaken
      *
      * @return \DateTime 
      */
-    public function getDatetime,Array,()
+    public function getDatetimetaken()
     {
-        return $this->datetime,Array,;
+        return $this->datetimetaken;
     }
 }
