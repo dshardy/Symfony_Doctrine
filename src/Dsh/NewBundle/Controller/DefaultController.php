@@ -7,7 +7,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
+
+    public function indexAction($name)
+    {
+        return new Response('<html><body>Hello '.$name.'!</body></html>');
+    }
+}
+
+/*
+{
+
+
+    public function CreateAction()
     {
     
     $photos = new photos();
@@ -23,6 +34,7 @@ class DefaultController extends Controller
     
    /*  exit(\Doctrine\Common\Util\Debug::dump($photos)); */
    
+/*
    $em = $this->getDoctrine()->getManager();
    $em->persist($photos);
    $em->flush();    
@@ -31,6 +43,49 @@ class DefaultController extends Controller
         return $this->render('NewBundle:Default:index.html.twig');
     }
 }
+*/
+
+
+/*
+{
+
+    public function showAction($id)
+
+    {
+
+    $id=4;     
+
+    $photos = $this->getDoctrine()
+        ->getRepository('DshNewBundle:Photos')
+        ->find($id);
+
+    if (!$photos) {
+        throw $this->createNotFoundException(
+            'No photos found for id '.$id
+        );
+    }
+    
+    $em = $this->getDoctrine()->getManager();
+    
+    $photos->set_photoprice(200);
+    
+    $em->persist($photos);
+    $em->flush();
+*/
+    
+  /*
+  exit(\Doctrine\Common\Util\Debug::dump($photos));
+    
+   
+    return $this->render('NewBundle:Default:index.html.twig');
+*/  
+     
+    // ... do something, like pass the $product object into a template
+/*
+}
+
+}
+*/
 
 // src/Dsh/NewBundle/Controller/DefaultController.php
 
@@ -61,3 +116,4 @@ public function createAction()
     
 }    
 */
+}
