@@ -4,6 +4,7 @@ namespace Dsh\NewBundle\Controller;
 
 use Dsh\NewBundle\Entity\Filmstrip\Photos;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
@@ -12,6 +13,8 @@ class DefaultController extends Controller
     {
         return new Response('<html><body>Hello '.$name.'!</body></html>');
     }
+
+
 }
 
 /*
@@ -116,4 +119,4 @@ public function createAction()
     
 }    
 */
-}
+
