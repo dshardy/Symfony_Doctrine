@@ -1,3 +1,7 @@
 new_homepage:
     pattern:  /hello
     defaults: { _controller: NewBundle:Default:index }
+    
+display_filmstrip:
+    pattern: /showmethepics
+    defaults: { _controller: NewBundle:Getphoto:index }

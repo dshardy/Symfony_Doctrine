@@ -1,10 +1,25 @@
 {% extends '::base.html.twig' %}
 
+{#
+{% stylesheets 'bundles/New/css/photostyle.css'
+   filter="cssrewrite" %}
+  <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+{% endstylesheets %}
+#}
+
 {% block body %}
        <div class="container">
        
-       things went well
+       so far so good..
+
+	
+
+{% image '@NewBundle/Resources/public/images/daisybaby.gif' %}
+    <img src="{{ asset_url }}" alt="Example" />
+{% endimage %}
+
+
+
        
        </div>
-       
-{% endblock %}       
+{% endblock %} 
