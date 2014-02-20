@@ -1,0 +1,49 @@
+body{
+background:#FFFFFF;
+font-family: Arial, Helvetica, sans-serif;
+}
+ 
+.filmspace{
+position: relative;
+z-index: 1;
+width: 1090px;
+height: 260px;
+margin: 0px auto;
+border: #639 1px solid;
+overflow: hidden;
+}
+ 
+.filmspace .film_strip {
+position: relative;
+width: 2180px;
+height: 260px;
+-webkit-animation: filmstrip_roll linear 12s infinite;
+-moz-animation: filmstrip_roll linear 12s infinite;
+-ms-animation: filmstrip_roll linear 12s infinite;
+-o-animation: filmstrip_roll linear 12s infinite;
+animation: filmstrip_roll linear 12s infinite;
+}
+
+.film_strip:after {
+    background-image: url('http://i.imgur.com/aVgMGWu.gif'); /* Film strip image url */
+    background-repeat: repeat-x;
+    content: "";    /* You need to specify (empty) content or else the element will not show */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+ 
+@-webkit-keyframes filmstrip_roll { from { right: 0px; } to { right: 792px; } }
+@-moz-keyframes filmstrip_roll { from { right: 0px; } to { right: 792px; } }
+@-ms-keyframes filmstrip_roll { from { right: 0px; } to { right: 792px; } }
+@-o-keyframes filmstrip_roll { from { right: 0px; } to { right: 792px; } }
+@keyframes filmstrip_roll { from { right: 0px; } to { right: 792px; } }
+ 
+.photosinstylesheet{
+        float: left;
+        padding-top: 42px;
+        padding-left: 6px;
+}

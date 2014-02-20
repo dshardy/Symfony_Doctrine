@@ -43,7 +43,11 @@ class photos
      */
     protected $photographer;
 
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 706b0264d3f259d90536ae404e2cc16416f9a773
 
 
 public function get_id(){
@@ -64,7 +68,10 @@ public function get_photoevent(){
 public function get_photographer(){
     return $photographer;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 706b0264d3f259d90536ae404e2cc16416f9a773
 
 
 public function set_id($value){
