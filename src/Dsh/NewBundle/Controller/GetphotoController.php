@@ -23,6 +23,8 @@ class GetphotoController extends Controller
 
      $category = $query->getResult();
 
+     return $this->render('NewBundle:Default:index.html.twig');     
+    
      }
 
 
